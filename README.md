@@ -2,6 +2,8 @@
 
 It is a 3D FPP detective game with narrative elements, inspired by Papers, Please, where the player takes the role of an office worker tasked with identifying a fraudster within a limited time. The player explores the office environment, interacts with computers, documents, and objects, and collects clues to solve the mystery.
 
+> **Status: Prototype | Completed (03.2025 - 06.2025)**
+
 ## Used Technologies:
 - Unity / C#
 - GitLab / GitKraken
