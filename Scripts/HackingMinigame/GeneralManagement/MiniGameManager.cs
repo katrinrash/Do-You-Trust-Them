@@ -23,7 +23,7 @@ public class MiniGameManager : MonoBehaviour
     public void Init()
     {
         currentCombo = new List<int>();
-        _comboCheck = comboVizualizer.targetCombination;
+        _comboCheck = comboVizualizer.TargetCombination;
         _elementIndex = 0;
         _isHorizontalTurn = true;
         _positionData = (0, 0);

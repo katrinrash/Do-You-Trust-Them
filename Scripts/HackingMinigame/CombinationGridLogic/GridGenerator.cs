@@ -1,10 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Manages the hacking mini-game grid, including button generation, element assignment, and grid reset logic.
+/// </summary>
+
 public class GridGenerator : MonoBehaviour
 {
     [SerializeField] private Transform container;
-
     [SerializeField] private List<GameObject> createdButtons;
 
     private string[] _possibleElements = { "A7", "B5", "D9", "0E" };

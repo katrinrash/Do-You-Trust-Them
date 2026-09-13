@@ -2,14 +2,18 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// Manages the target combination UI, including generating and displaying the target combination and updating the player's current choices.
+/// </summary>
+
 public class CombVizualizer : MonoBehaviour
 { 
     [SerializeField] private TextMeshProUGUI targetComboText;
     [SerializeField] private TextMeshProUGUI choicesText;
 
-    public List<string> targetCombination { get; private set; }
+    public List<string> TargetCombination { get; private set; }
 
-    private CombGenerator combGenerator = new CombGenerator();    
+    private CombGenerator _combGenerator = new CombGenerator();    
 
     private void Start()
     {
@@ -18,8 +22,8 @@ public class CombVizualizer : MonoBehaviour
 
     public void CreateTarget()
     {
-        targetCombination = combGenerator.GenerateCombination();
-        targetComboText.text = "Your Target: " + string.Join(" ", targetCombination);
+        TargetCombination = _combGenerator.GenerateCombination();
+        targetComboText.text = "Your Target: " + string.Join(" ", TargetCombination);
         choicesText.text = "Your Choices: ";
 
         MiniGameManager.Instance.Init();
