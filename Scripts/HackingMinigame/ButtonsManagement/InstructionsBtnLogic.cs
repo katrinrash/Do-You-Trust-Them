@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Manages the instructions button, including handling panel visibility and gameplay pause state.
+/// </summary>
+
 public class InstructionsBtnLogic : MonoBehaviour
 {
     [SerializeField] private GameObject instructionsPanel;
@@ -19,6 +23,6 @@ public class InstructionsBtnLogic : MonoBehaviour
         instructionsPanel.SetActive(_isPanelActive);
         blocker.SetActive(_isPanelActive);
 
-        Time.timeScale = _isPanelActive ? 0f : 1f; // Pause/Resume the game based on panel state
+        Time.timeScale = _isPanelActive ? 0f : 1f; 
     }
 }

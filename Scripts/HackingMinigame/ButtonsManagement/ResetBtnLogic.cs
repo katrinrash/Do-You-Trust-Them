@@ -2,6 +2,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Manages the reset button, including reset availability, remaining reset count, and grid reset actions.
+/// </summary>
+
 public class ResetBtnLogic : MonoBehaviour
 {
     [SerializeField] private GridGenerator gridGenerator;
@@ -27,7 +31,7 @@ public class ResetBtnLogic : MonoBehaviour
 
     private void OnButtonClick()
     {
-       if(_amountOfResets == 0 || MiniGameManager.Instance.currentCombo.Count > 0)
+       if(_amountOfResets == 0 || MiniGameManager.Instance.CurrentCombo.Count > 0)
        {
             infoText.text = "Reset is not allowed";
             _button.interactable = false;

@@ -1,6 +1,10 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Manages the core hacking mini-game logic, including combination validation, button selection, turn-based movement, and win conditions.
+/// </summary>
+
 public class MiniGameManager : MonoBehaviour
 {
     public static MiniGameManager Instance { get; private set; }
@@ -8,7 +12,7 @@ public class MiniGameManager : MonoBehaviour
     [SerializeField] private CombVizualizer comboVizualizer;
     [SerializeField] private TimerController timerController;
 
-    public List<int> currentCombo { get; private set;}
+    public List<int> CurrentCombo { get; private set;}
 
     private List<string> _comboCheck = new List<string>();
     private bool _isHorizontalTurn;
@@ -22,7 +26,7 @@ public class MiniGameManager : MonoBehaviour
 
     public void Init()
     {
-        currentCombo = new List<int>();
+        CurrentCombo = new List<int>();
         _comboCheck = comboVizualizer.TargetCombination;
         _elementIndex = 0;
         _isHorizontalTurn = true;
@@ -34,7 +38,7 @@ public class MiniGameManager : MonoBehaviour
         if (_elementIndex >= _comboCheck.Count || button.Value != _comboCheck[_elementIndex])
             return;
 
-        if (currentCombo.Count == 0 && button.Row == 0) 
+        if (CurrentCombo.Count == 0 && button.Row == 0) 
         {
             AcceptButton(button);
             return;
@@ -52,9 +56,9 @@ public class MiniGameManager : MonoBehaviour
         btn.Select();
         _elementIndex++;
         comboVizualizer.UpdateChoicesText(btn.Value);
-        currentCombo.Add(_elementIndex);
+        CurrentCombo.Add(_elementIndex);
 
-        if(currentCombo.Count == _comboCheck.Count)
+        if(CurrentCombo.Count == _comboCheck.Count)
         {
             timerController.StopTimer();
             GameFlowManager.Instance.WinGame();
@@ -64,5 +68,4 @@ public class MiniGameManager : MonoBehaviour
         _positionData.lastColumn = btn.Column;
         _isHorizontalTurn = !_isHorizontalTurn;
     }
-
 }

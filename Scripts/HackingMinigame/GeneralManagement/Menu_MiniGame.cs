@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/// <summary>
+/// Manages the mini-game menu.
+/// </summary>
+
 public class Menu_MiniGame : MonoBehaviour
 {
     [SerializeField] private GameObject menuPanel;

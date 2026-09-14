@@ -2,6 +2,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Manages loading and unloading of the hacking mini-game scene using additive scene loading.
+/// </summary>
+
 public class SceneLoader : MonoBehaviour
 {
     public static SceneLoader Instance { get; private set; }
@@ -36,7 +40,7 @@ public class SceneLoader : MonoBehaviour
         mainEventSystem.SetActive(false);
         menuView.SetAccess(false); 
         notebookManager.isAvailable = false;
-        audioManager.gameObject.SetActive(false); // Disable audio manager during minigame
+        audioManager.gameObject.SetActive(false); 
 
         // AsyncLoading to show minigame over the main scene
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(_sceneIndex, LoadSceneMode.Additive);
@@ -69,7 +73,7 @@ public class SceneLoader : MonoBehaviour
 
         player.SetActive(true);
         mainEventSystem.SetActive(true);
-        audioManager.gameObject.SetActive(true); // Re-enable audio manager after minigame
+        audioManager.gameObject.SetActive(true); 
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -84,7 +88,5 @@ public class SceneLoader : MonoBehaviour
         {
             screenViewController.EnterScreenView();
         }
-
     }
-
 }

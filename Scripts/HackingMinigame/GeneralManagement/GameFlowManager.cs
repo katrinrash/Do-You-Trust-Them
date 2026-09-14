@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/// <summary>
+/// Manages the hacking mini-game flow, including win and Game Over states.
+/// </summary>
+
 public class GameFlowManager : MonoBehaviour
 {
     public static GameFlowManager Instance { get; private set; }

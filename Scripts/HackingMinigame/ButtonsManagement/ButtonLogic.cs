@@ -2,6 +2,10 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+/// <summary>
+/// Manages the main interactive buttons of the hacking mini-game, including their data, interactions, and visual states.
+/// </summary>
+
 public class ButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public string Value { get; private set; } 
@@ -46,7 +50,7 @@ public class ButtonLogic : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     private void Unhighlight()
     {
         if (button.interactable)
-        buttonBackground.color = defaultColor; // Resets the button color to the default
+        buttonBackground.color = defaultColor; 
     }
 
     private void OnButtonClick()

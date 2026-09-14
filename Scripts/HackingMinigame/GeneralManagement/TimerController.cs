@@ -1,6 +1,10 @@
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// Manages the mini-game timer, including countdown, timer display, and triggering the Game Over state when time runs out.
+/// </summary>
+
 public class TimerController : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
