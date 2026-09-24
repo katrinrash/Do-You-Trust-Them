@@ -1,6 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Manages computer-related day activities, including task setup, completion tracking, and activity progress updates.
+/// </summary>
+
 public class ComputerActivity : MonoBehaviour, IActivity
 {
     public static ComputerActivity Instance { get; private set;}

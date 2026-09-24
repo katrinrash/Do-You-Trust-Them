@@ -1,5 +1,9 @@
 ﻿using System.Collections.Generic;
 
+/// <summary>
+/// Provides base logic for managing activity tasks, including task setup and completion handling.
+/// </summary>
+
 public class ActivityTasksController
 {
     protected List<string> _names;
@@ -17,5 +21,4 @@ public class ActivityTasksController
     {
         TaskManager.Instance.CompleteTask(name);
     }
-
 }

@@ -2,6 +2,10 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// Manages informational UI updates between game days, including displaying day information and updating notebook entries.
+/// </summary>
+
 public class InfoManager : MonoBehaviour
 {
     [SerializeField] private List<GameObject> infoPages;

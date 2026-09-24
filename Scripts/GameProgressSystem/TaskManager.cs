@@ -2,6 +2,10 @@
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// Manages the task UI for the current day, including task creation, completion tracking, and task list updates.
+/// </summary>
+
 public class TaskManager : MonoBehaviour
 {
     public static TaskManager Instance { get; private set; }

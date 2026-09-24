@@ -1,6 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Manages object-related activities for each day, including task setup, completion tracking, and activity progress updates.
+/// </summary>
+
 public class ObjectActivity : MonoBehaviour, IActivity
 {
     public static ObjectActivity Instance { get; private set; }

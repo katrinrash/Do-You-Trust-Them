@@ -1,6 +1,10 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Manages overall activity progress for the current day.
+/// </summary>
+
 public class ProgressController : MonoBehaviour
 {
     public static ProgressController Instance { get; private set; }

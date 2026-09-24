@@ -1,6 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Manages mini-game activities for each day, including task setup, completion tracking, and activity progress updates.
+/// </summary>
+
 public class MiniGamesActivity : MonoBehaviour, IActivity
 {
     public static MiniGamesActivity Instance { get; private set; }
